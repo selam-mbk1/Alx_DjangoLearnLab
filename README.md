@@ -1,1 +1,0 @@
-my first Django Project
