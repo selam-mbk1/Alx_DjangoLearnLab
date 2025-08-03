@@ -1,7 +1,9 @@
-# Delete Operation
+from bookshelf.models import Book
 
-```python
-book = Book.objects.get(title="Nineteen Eighty-Four")
-book.delete()
-Book.objects.all()
-# Output: <QuerySet []>
+# Example: delete a book with id=1
+try:
+    book_to_delete = Book.objects.get(id=1)
+    book_to_delete.delete()
+    print("Book deleted successfully.")
+except Book.DoesNotExist:
+    print("Book not found.")
