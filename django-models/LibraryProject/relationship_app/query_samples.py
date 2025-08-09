@@ -1,11 +1,14 @@
 import os
 import django
+from book_shelf.models import Book
 
 # Setup Django environment
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django-models.settings')
 django.setup()
 
 from relationship_app.models import Author, Library, Librarian
+Book.objects.filter(author=author)
+
 
 # 1. Query all books by a specific author
 author_name = "John Doe"
